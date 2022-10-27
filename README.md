@@ -3,6 +3,9 @@
 
 ## [Research File](https://docs.google.com/document/d/19b5j6745Gz-Npo_mM9cbXDgvNdeRu-IEHAIWFK8I0Cs/edit)
 
+## Use Case Diagram
+![image](https://user-images.githubusercontent.com/114183307/198175536-63c793df-9fa4-4f12-b72a-0ac8b18f6028.png)
+
 ## Name: Solicit Point Total and Course of Action from Users
 
 Identifier: 1
