@@ -12,6 +12,29 @@ public static void printAttackerOptions()
 
 }
 
+public static void printDefenderOptions()
+{
+    System.out.println("Here are the defender options"); 
+}
+
+public static int checkValidIntegerEntry(BufferedReader in) throws IOException
+{
+    boolean correctIntEntered = false; 
+    int valueEntered = 0; 
+
+    while (!correctIntEntered)
+    {
+        try {
+            valueEntered = Integer.parseInt(in.readLine());
+            correctIntEntered = true; 
+        } catch (Exception e) {
+            // TODO: handle exception
+            correctIntEntered = false; 
+        }
+    }
+    return valueEntered; 
+}
+
 
 public static void main(String args[]) throws IOException
 {
@@ -21,9 +44,18 @@ public static void main(String args[]) throws IOException
 
     while (true)
     {
+        /*/
         System.out.print("\nAttacker: Select an option to continue: "); 
-        int userOptionSelected = Integer.parseInt(in.readLine());  
+        int attackerOptionSelected = Integer.parseInt(in.readLine());  
         printAttackerOptions(); 
+        */ 
+        System.out.print("Enter a value: ");
+        int valueEntered = checkValidIntegerEntry(in); 
+
+        System.out.print("\nDefender: Slect an option to continue"); 
+        int defenderOptionSelected = Integer.parseInt(in.readLine());
+        printDefenderOptions();
+        
 
 
     }
