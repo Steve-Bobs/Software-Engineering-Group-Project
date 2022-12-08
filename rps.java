@@ -76,7 +76,7 @@ public class rps {
 	    List<String> a_choices = new ArrayList<String>();
 
 	    // repeats for 7 days (currently 1)
-	    while (input < 1) {
+	    while (input < 7) {
 	    	
 	    	// prints out the statistics
 	    	System.out.println("Defender Score: " + d_score);
