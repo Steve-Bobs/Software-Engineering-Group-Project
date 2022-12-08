@@ -40,6 +40,9 @@ public class rps {
 	    
 	    int a_score = 0;
 	    int d_score = 0;
+
+		public attack attacker = new attack(); 
+		public defend defender = new defend(); 
 	    
 	    // have a list of bought attacks and defenses
 	    // append to them list each time
