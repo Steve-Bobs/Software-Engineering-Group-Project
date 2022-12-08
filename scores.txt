@@ -1,0 +1,16 @@
+Defender Score: 0
+Defender Points Left: 60
+
+Attacker Score: 1
+Attacker Points Left: 60
+
+Attackers win because they had more points
+
+Defender Score: 1
+Defender Points Left: 60
+
+Attacker Score: 0
+Attacker Points Left: 60
+
+Defenders win because they had more points
+

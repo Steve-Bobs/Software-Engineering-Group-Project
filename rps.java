@@ -1,4 +1,5 @@
-package rockpprss;
+//package rockpprss;
+import scores.scores;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
@@ -42,22 +43,24 @@ public class rps {
 	    // append to them list each time
 	    // 1 point per win 
 	    // seven days assures no one ties
+	    
 	    // defense 1 counters atk 1; 2 and 2; 3 reduces chance of 3; 4 for 4; 5 for 5; 7 counters 6; 7 is unaccounted for; 6 decreases all chances  
+	    
 	    // probability of an attack winning without defense is 90%
 	    
-	    
+	    scores.readFile();
 	    
 	    List<String> d_choices = new ArrayList<String>();
 	    List<String> a_choices = new ArrayList<String>();
 
 	    // repeats for 7 days (currently 1)
-	    while (input < 7) {
+	    while (input < 1) {
 	    	
 	    	// prints out the statistics
 	    	System.out.println("Defender Score: " + d_score);
 	    	System.out.println("Defender Points Left: " + d_points);
 	    	
-	    	System.out.println("\n Attacker Score: " + a_score);
+	    	System.out.println("Attacker Score: " + a_score);
 	    	System.out.println("Attacker Points Left: " + a_points);
 	    	
 	    	
@@ -90,22 +93,21 @@ public class rps {
 			    	d_score += 1;
 		    	}
 		    }
-		      
-		    
+			
 		    input += 1;
 	    }
-	    
-	    System.out.println("Defender Score: " + d_score);
-    	System.out.println("Defender Points Left: " + d_points);
-    	
-    	System.out.println("\n Attacker Score: " + a_score);
-    	System.out.println("Attacker Points Left: " + a_points + "\n\n\n");
+		String outputString = "Defender Score: " + d_score + "\n" +
+						"Defender Points Left: " + d_points + "\n" +
+						"\nAttacker Score: " + a_score + "\n" +
+						"Attacker Points Left: " + a_points + "\n\n";
     	
     	if (d_score > a_score) {
-    		System.out.println("Defenders win because they had more points");
+			outputString += "Defenders win because they had more points\n\n";
     	} else {
-    		System.out.println("Attackers win because they had more points");
-    	}
+			outputString += "Attackers win because they had more points\n\n";    	
+		}
+		System.out.println(outputString);
+
+		scores.writeFile(outputString);
 	}
 }
-
