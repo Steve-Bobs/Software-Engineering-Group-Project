@@ -1,4 +1,4 @@
-
+package usersInfo; 
 import java.util.*;
 
 ///handles the options that attackers input and tracks points that the attackers have
