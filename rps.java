@@ -72,6 +72,7 @@ public class rps {
 	    
 	    scores.readFile();
 	    
+		//local copies of what the attacker/defenders chose to do
 	    List<String> d_choices = new ArrayList<String>();
 	    List<String> a_choices = new ArrayList<String>();
 
@@ -91,14 +92,18 @@ public class rps {
 	    	System.out.println("Defender's move: (enter number of desired defence)");
 		    String defenders_input = String.valueOf(checkValidIntegerEntry(in)); //Waits for input
 		    d_choices.add(defenders_input);
+			defender.addActionsTaken(defenders_input);
 		    d_points -= 10;
+			defender.addPoints(-10);
 		    
 		    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	    	System.out.println(attacks);
 		    System.out.println("Attacker's move: (enter number of desired attack)");
 		    String attacker_input = String.valueOf(checkValidIntegerEntry(in)); //Waits for input
 			a_choices.add(attacker_input);
+			attacker.addActionsTaken(attacker_input);
 		    a_points -= 10;
+			attacker.addPoints(-10);
 		    
 		    if (d_choices.contains(attacker_input) == true){
 		    	System.out.println("Failed attack; defenders win");
