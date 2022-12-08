@@ -1,4 +1,4 @@
-
+package usersInfo; 
 import java.util.*;
 
 ///handles the options that defenders input and tracks points that the defenders have
