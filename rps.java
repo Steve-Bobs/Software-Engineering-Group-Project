@@ -1,6 +1,8 @@
 //package rockpprss;
-import scores.scores;
 import java.util.Scanner;
+
+import classes.*;
+
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.Arrays;
