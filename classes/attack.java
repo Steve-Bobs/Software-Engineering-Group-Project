@@ -2,7 +2,7 @@ package classes;
 import java.util.*;
 
 ///handles the options that attackers input and tracks points that the attackers have
-class attack{
+public class attack{
     
     int point;
     int resources;

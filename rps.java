@@ -1,16 +1,33 @@
-//package rockpprss;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 import classes.*;
 
 import java.util.Random;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class rps {
-	public static void main(String[] args) {
-	    Scanner scan = new Scanner(System.in); //Creates a new scanner
+	public static int checkValidIntegerEntry(BufferedReader in) throws IOException
+    {
+        boolean correctIntEntered = false; 
+        int valueEntered = 0; 
+
+        while (!correctIntEntered)
+        {
+            try {
+                valueEntered = Integer.parseInt(in.readLine());
+                correctIntEntered = true; 
+            } catch (Exception e) {
+                correctIntEntered = false; 
+                System.out.print("\nInvalid integer entered: Try again "); 
+            }
+        }
+        return valueEntered; 
+    }
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	    int input = 0;
 	    
 	    Random rand = new Random();
@@ -69,14 +86,15 @@ public class rps {
 	    	System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	    	System.out.println(defences);
 	    	System.out.println("Defender's move: (enter number of desired defence)");
-		    String defenders_input = scan.nextLine(); //Waits for input
+		    String defenders_input = String.valueOf(checkValidIntegerEntry(in)); //Waits for input
 		    d_choices.add(defenders_input);
 		    d_points -= 10;
 		    
 		    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	    	System.out.println(attacks);
 		    System.out.println("Attacker's move: (enter number of desired attack)");
-		    String attacker_input = scan.nextLine(); //Waits for input
+		    String attacker_input = String.valueOf(checkValidIntegerEntry(in)); //Waits for input
+			a_choices.add(attacker_input);
 		    a_points -= 10;
 		    
 		    if (d_choices.contains(attacker_input) == true){
