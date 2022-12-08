@@ -1,8 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
 
 public class SWE_PRJ_STARTUP{
 
@@ -70,7 +70,8 @@ public class SWE_PRJ_STARTUP{
             int defenderValueEntered = checkValidIntegerEntry(in);
             //printDefenderOptions();
 
-            
+            System.out.println(attackerValueEntered);
+            System.out.println(defenderValueEntered);
             System.out.println(executeAttackerOptionSelected());
 
             System.out.println(executeDefenderOptionSelected()); 

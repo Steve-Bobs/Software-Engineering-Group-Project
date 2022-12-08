@@ -2,7 +2,7 @@ package classes;
 import java.util.*;
 
 ///handles the options that defenders input and tracks points that the defenders have
-class defend{
+public class defend{
     
     int point;
     int resources;
