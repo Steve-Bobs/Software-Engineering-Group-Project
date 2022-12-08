@@ -8,7 +8,7 @@ import java.util.List;
 public class rps {
 	public static void main(String[] args) {
 	    Scanner scan = new Scanner(System.in); //Creates a new scanner
-	    String input = "0";
+	    int input = 0;
 	    
 	    Random rand = new Random();
 	    
@@ -42,9 +42,7 @@ public class rps {
 	    // append to them list each time
 	    // 1 point per win 
 	    // seven days assures no one ties
-	    
 	    // defense 1 counters atk 1; 2 and 2; 3 reduces chance of 3; 4 for 4; 5 for 5; 7 counters 6; 7 is unaccounted for; 6 decreases all chances  
-	    
 	    // probability of an attack winning without defense is 90%
 	    
 	    
@@ -53,13 +51,13 @@ public class rps {
 	    List<String> a_choices = new ArrayList<String>();
 
 	    // repeats for 7 days (currently 1)
-	    while (input != "1") {
+	    while (input < 7) {
 	    	
 	    	// prints out the statistics
 	    	System.out.println("Defender Score: " + d_score);
 	    	System.out.println("Defender Points Left: " + d_points);
 	    	
-	    	System.out.println("Attacker Score: " + a_score);
+	    	System.out.println("\n Attacker Score: " + a_score);
 	    	System.out.println("Attacker Points Left: " + a_points);
 	    	
 	    	
@@ -96,5 +94,18 @@ public class rps {
 		    
 		    input += 1;
 	    }
+	    
+	    System.out.println("Defender Score: " + d_score);
+    	System.out.println("Defender Points Left: " + d_points);
+    	
+    	System.out.println("\n Attacker Score: " + a_score);
+    	System.out.println("Attacker Points Left: " + a_points + "\n\n\n");
+    	
+    	if (d_score > a_score) {
+    		System.out.println("Defenders win because they had more points");
+    	} else {
+    		System.out.println("Attackers win because they had more points");
+    	}
 	}
 }
+
