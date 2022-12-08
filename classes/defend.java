@@ -1,4 +1,4 @@
-package usersInfo; 
+package classes; 
 import java.util.*;
 
 ///handles the options that defenders input and tracks points that the defenders have
@@ -9,12 +9,12 @@ class defend{
     ArrayList<String> atList = new ArrayList<String>();
 
     ///returns the finshed created list
-    public String actionsTaken(){ 
+    public ArrayList<String> actionsTaken(){ 
         return this.atList;
     }
 
     ///takes the inputted string and adds it to the actions taken list 
-    public addActionsTaken(String actionTaken){ 
+    public void addActionsTaken(String actionTaken){ 
         this.atList.add(actionTaken); 
 
     }
